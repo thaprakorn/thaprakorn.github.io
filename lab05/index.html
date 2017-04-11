@@ -1,0 +1,175 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Registration form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="formstyle.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	$("#clearbr").click(function(){
+		document.getElementById("inform").reset();
+    });
+	
+});
+
+
+</script>
+
+<body>
+<div class="formstyle" id="informationform">
+	<h1></h1>
+	<form id="inform" action="readfile.php" method="post">
+		<label>Firstname</label>
+	    <input type="text" class="input-field" id="firstname" name="firstname"/>
+        <br><label>Lastname</label>
+      	<input type="text" class="input-field" id="lastname" name="lastname"/>
+        <br><label>Birthdate</label>
+        <select class="select-field" id="date">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		  <option value="20">20</option>
+		  <option value="21">21</option>
+		  <option value="22">22</option>
+		  <option value="23">23</option>
+		  <option value="24">24</option>
+		  <option value="25">25</option>
+		  <option value="26">26</option>
+		  <option value="27">27</option>
+		  <option value="28">28</option>
+		  <option value="29">29</option>
+		  <option value="30">30</option>
+		  <option value="31">31</option>
+		 </select>
+         <select class="select-field" id="month">
+		  	<option value="1">January</option>
+		  	<option value="2">February</option>
+		  	<option value="3">March</option>
+		  	<option value="4">April</option>
+		  	<option value="5">May</option>
+		  	<option value="6">June</option>
+		  	<option value="7">July</option>
+		  	<option value="8">August</option>
+		  	<option value="9">September</option>
+		  	<option value="10">October</option>
+		  	<option value="11">November</option>
+		  	<option value="12">December</option>
+        </select>
+       	<input type="text" class="number-field" id="year" placeholder="Year" maxlength="4"></input>
+        <br><label>Gender</label>
+        <input type="radio" id="male" name="gender" value="male" checked="true"/>Male
+		<input type="radio" id="female" name="gender" value="female"/>Female
+   		<br><label>Province</label>
+		<select id="province" name="province">
+      		<option value="1">กรุงเทพมหานคร</option>
+      		<option value="2">กระบี่ </option>
+      		<option value="3">กาญจนบุรี </option>
+      		<option value="4">กาฬสินธุ์ </option>
+      		<option value="5">กำแพงเพชร </option>
+      		<option value="6">ขอนแก่น</option>
+      		<option value="7">จันทบุรี</option>
+      		<option value="8">ฉะเชิงเทรา </option>
+      		<option value="9">ชัยนาท </option>
+      		<option value="10">ชัยภูมิ </option>
+      		<option value="11">ชุมพร </option>
+      		<option value="12">ชลบุรี </option>
+      		<option value="13">เชียงใหม่ </option>
+      		<option value="14">เชียงราย </option>
+      		<option value="15">ตรัง </option>
+      		<option value="16">ตราด </option>
+      		<option value="17">ตาก </option>
+      		<option value="18">นครนายก </option>
+      		<option value="19">นครปฐม </option>
+      		<option value="20">นครพนม </option>
+      		<option value="21">นครราชสีมา </option>
+      		<option value="22">นครศรีธรรมราช </option>
+      		<option value="23">นครสวรรค์ </option>
+      		<option value="24">นราธิวาส </option>
+      		<option value="25">น่าน </option>
+      		<option value="26">นนทบุรี </option>
+      		<option value="27">บึงกาฬ</option>
+      		<option value="28">บุรีรัมย์</option>
+      		<option value="29">ประจวบคีรีขันธ์ </option>
+      		<option value="30">ปทุมธานี </option>
+      		<option value="31">ปราจีนบุรี </option>
+      		<option value="32">ปัตตานี </option>
+      		<option value="33">พะเยา </option>
+      		<option value="34">พระนครศรีอยุธยา </option>
+      		<option value="35">พังงา </option>
+      		<option value="36">พิจิตร </option>
+      		<option value="37">พิษณุโลก </option>
+      		<option value="38">เพชรบุรี </option>
+      		<option value="39">เพชรบูรณ์ </option>
+      		<option value="40">แพร่ </option>
+      		<option value="41">พัทลุง </option>
+      		<option value="42">ภูเก็ต </option>
+      		<option value="43">มหาสารคาม </option>
+      		<option value="44">มุกดาหาร </option>
+      		<option value="45">แม่ฮ่องสอน </option>
+      		<option value="46">ยโสธร </option>
+      		<option value="47">ยะลา </option>
+      		<option value="48">ร้อยเอ็ด </option>
+      		<option value="49">ระนอง </option>
+      		<option value="50">ระยอง </option>
+      		<option value="51">ราชบุรี</option>
+      		<option value="52">ลพบุรี </option>
+      		<option value="53">ลำปาง </option>
+      		<option value="54">ลำพูน </option>
+      		<option value="55">เลย </option>
+      		<option value="56">ศรีสะเกษ</option>
+      		<option value="57">สกลนคร</option>
+      		<option value="58">สงขลา </option>
+      		<option value="59">สมุทรสาคร </option>
+      		<option value="60">สมุทรปราการ </option>
+      		<option value="61">สมุทรสงคราม </option>
+      		<option value="62">สระแก้ว </option>
+      		<option value="63">สระบุรี </option>
+      		<option value="64">สิงห์บุรี </option>
+      		<option value="65">สุโขทัย </option>
+      		<option value="66">สุพรรณบุรี </option>
+      		<option value="67">สุราษฎร์ธานี </option>
+      		<option value="68">สุรินทร์ </option>
+      		<option value="69">สตูล </option>
+      		<option value="70">หนองคาย </option>
+      		<option value="71">หนองบัวลำภู </option>
+      		<option value="72">อำนาจเจริญ </option>
+      		<option value="73">อุดรธานี </option>
+      		<option value="74">อุตรดิตถ์ </option>
+      		<option value="75">อุทัยธานี </option>
+      		<option value="76">อุบลราชธานี</option>
+      		<option value="77">อ่างทอง </option>
+      		<option value="78">บึงกาฬ</option>
+		</select>
+    <br><br><br><input type="submit" id="subbt" name="submit" value="submit"/>
+  	<input type="button" id="clearbr" value="cancel"/>
+	</form>
+    
+</div>
+
+<div  class="hiden" id="resultarea">
+	<h1 id="provincename">จังหวัด</h1>
+	<img id="myImg" name="resIMG" width="300" height="300"  alt=""/> 
+    <h3 id="slogan" >คำขวัญ : </h3>
+</div>
+
+</body>
+</html>
