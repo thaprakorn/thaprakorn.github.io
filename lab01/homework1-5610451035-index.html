@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Homework1-5610451035</title>
+</head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<script>
+function submitFunction() {
+    var fname = document.getElementById("firstname").value;
+    var lname = document.getElementById("lastname").value;
+	var nname = document.getElementById("nickname").value;
+	var e = document.getElementById("gender");
+	var gender = e.options[e.selectedIndex].value;
+	var e2 = document.getElementById("year");
+	var year = e2.options[e2.selectedIndex].value;
+	alert("Welcome "+nname+'\n'
+	+"Your Infomation"+'\n'
+	+"Your first name : "+fname+'\n'
+	+"Your last name : "+lname+'\n'
+	+"Gender : "+gender+'\n'
+	+"year : "+year+'\n');
+	
+	
+}
+</script>
+
+   
+<body>
+
+    <h1>1.Text style</h1>
+    	<div>
+        	<b>This is Bold text</b>
+			<br><strong>This is Important text</strong>
+			<br><i>This is Italic text</i>
+			<br><em>This is Emphasized text</em>
+			<br><mark>This is Marked text</mark>
+			<br><small>This is Small text</small>
+			<br><del>This is Deleted text</del>
+			<br><ins>This is Inserted text</ins>
+			<br><sub>This is Subscript text</sub>
+			<br><sup>This is Superscript text</sup>
+    	</div>
+    <h1>2.Add image, link and image link</h1>
+    	<div>
+        	<img src="www.jpg" alt="This is image" width="200" height="100">
+        	<a href="http://www.facebook.com"><img src="facebook.png" alt="This is image" width="200" height="100"> </a>
+			<a href="http://www.google.co.th">This is link to Google</a>
+        </div>
+	<h1>3.Create Table</h1>
+    	<div>
+        	<table>
+  				<tr>
+    				<th>User ID</th>
+    				<th>Name</th> 
+    				<th>phone</th>
+  					</tr>
+  				<tr>
+    				<td>01</td>
+    				<td>Thaprakorn01</td> 
+    				<td>081-234-5678</td>
+  				</tr>
+  				<tr>
+    				<td>02</td>
+    				<td>Thaprakorn02</td> 
+   					<td>088-765-4321</td>
+  				</tr>
+			</table>
+        </div>
+        <h1>4.Create form</h1>
+    	<div id="regis">
+        	<form id="regisform" action="kusong.html">
+  			Firstname:
+  			<input type="text" name="firstname" id="firstname">
+  			<br><br>Lastname:
+  			<input type="text" name="lastname" id="lastname">
+            <br><br>Nickname:
+  			<input type="text" name="nickname" id="nickname">
+  			<br><br>
+           	Gender : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="gender">
+  				<option value="Male">Male</option>
+  				<option value="Female">Female</option>
+			</select>
+            <br><br>year studing :  
+            <select id="year">
+  				<option value="1">ปี1</option>
+  				<option value="2">ปี2</option>
+  				<option value="3">ปี3</option>
+ 				<option value="4">ปี4</option>
+			</select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  			<button onclick="submitFunction()">Submit to KU song</button>
+			</form> 	
+    	</div> 	
+</body>
+    
+</html>
