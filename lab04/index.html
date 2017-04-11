@@ -1,0 +1,212 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Registration form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="formstyle.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	$("#clearbr").click(function(){
+		document.getElementById("inform").reset();
+    });
+	
+	$("#subbt").click(function(){
+		var mss = $("#province").val();
+		var filename = "motto/"+mss+".txt";
+		var imgname = "sign/"+mss+".png";
+		var imgsrc = document.getElementById("myImg");
+		var firstname = $("#firstname").val();
+		var lastname = $("#lastname").val();
+		var year = $("#year").val();
+		var radiochecked = $("#male").prop("checked");
+		if(firstname == ""){
+			alert("Firstname must be spacified !!!");
+		}
+		else if(year == ""){
+			alert("Year must be spacified !!!");
+		}
+		else if(confirm("Your selected :  "+mss) == true){
+  			$.get(filename,function(data){
+				document.getElementById("slogan").innerHTML = "คำขวัญ : "+data;
+			});
+			imgsrc.src = imgname;
+			document.getElementById("provincename").innerHTML = mss;
+			document.getElementById("inform").innerHTML = "<h1>สวัสดี  คุณ"+firstname+"  "+lastname+"</h1>";
+			if(2017-parseInt(year) <= 13){
+				$("body").addClass("child");
+			}
+			else{
+				if(radiochecked == true){
+					$("body").addClass("men");
+				}
+				else{
+					$("body").addClass("women");
+				}
+				
+			}
+		}
+		$("#resultarea").show();
+    });
+});
+
+
+</script>
+
+<body>
+<div class="formstyle" id="informationform">
+	<h1></h1>
+	<form id="inform">
+		<label>Firstname</label>
+	    <input type="text" class="input-field" id="firstname" />
+        <br><label>Lastname</label>
+      	<input type="text" class="input-field" id="lastname" />
+        <br><label>Birthdate</label>
+        <select class="select-field" id="date">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		  <option value="20">20</option>
+		  <option value="21">21</option>
+		  <option value="22">22</option>
+		  <option value="23">23</option>
+		  <option value="24">24</option>
+		  <option value="25">25</option>
+		  <option value="26">26</option>
+		  <option value="27">27</option>
+		  <option value="28">28</option>
+		  <option value="29">29</option>
+		  <option value="30">30</option>
+		  <option value="31">31</option>
+		 </select>
+         <select class="select-field" id="month">
+		  	<option value="1">January</option>
+		  	<option value="2">February</option>
+		  	<option value="3">March</option>
+		  	<option value="4">April</option>
+		  	<option value="5">May</option>
+		  	<option value="6">June</option>
+		  	<option value="7">July</option>
+		  	<option value="8">August</option>
+		  	<option value="9">September</option>
+		  	<option value="10">October</option>
+		  	<option value="11">November</option>
+		  	<option value="12">December</option>
+        </select>
+       	<input type="text" class="number-field" id="year" placeholder="Year" maxlength="4"></input>
+        <br><label>Gender</label>
+        <input type="radio" id="male" name="gender" value="male" checked="true"/>Male
+		<input type="radio" id="female" name="gender" value="female"/>Female
+   		<br><label>Province</label>
+		<select id="province">
+      		<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+      		<option value="กระบี่">กระบี่ </option>
+      		<option value="กาญจนบุรี">กาญจนบุรี </option>
+      		<option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+      		<option value="กำแพงเพชร">กำแพงเพชร </option>
+      		<option value="ขอนแก่น">ขอนแก่น</option>
+      		<option value="จันทบุรี">จันทบุรี</option>
+      		<option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+      		<option value="ชัยนาท">ชัยนาท </option>
+      		<option value="ชัยภูมิ">ชัยภูมิ </option>
+      		<option value="ชุมพร">ชุมพร </option>
+      		<option value="ชลบุรี">ชลบุรี </option>
+      		<option value="เชียงใหม่">เชียงใหม่ </option>
+      		<option value="เชียงราย">เชียงราย </option>
+      		<option value="ตรัง">ตรัง </option>
+      		<option value="ตราด">ตราด </option>
+      		<option value="ตาก">ตาก </option>
+      		<option value="นครนายก">นครนายก </option>
+      		<option value="นครปฐม">นครปฐม </option>
+      		<option value="นครพนม">นครพนม </option>
+      		<option value="นครราชสีมา">นครราชสีมา </option>
+      		<option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+      		<option value="นครสวรรค์">นครสวรรค์ </option>
+      		<option value="นราธิวาส">นราธิวาส </option>
+      		<option value="น่าน">น่าน </option>
+      		<option value="นนทบุรี">นนทบุรี </option>
+      		<option value="บึงกาฬ">บึงกาฬ</option>
+      		<option value="บุรีรัมย์">บุรีรัมย์</option>
+      		<option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+      		<option value="ปทุมธานี">ปทุมธานี </option>
+      		<option value="ปราจีนบุรี">ปราจีนบุรี </option>
+      		<option value="ปัตตานี">ปัตตานี </option>
+      		<option value="พะเยา">พะเยา </option>
+      		<option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+      		<option value="พังงา">พังงา </option>
+      		<option value="พิจิตร">พิจิตร </option>
+      		<option value="พิษณุโลก">พิษณุโลก </option>
+      		<option value="เพชรบุรี">เพชรบุรี </option>
+      		<option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+      		<option value="แพร่">แพร่ </option>
+      		<option value="พัทลุง">พัทลุง </option>
+      		<option value="ภูเก็ต">ภูเก็ต </option>
+      		<option value="มหาสารคาม">มหาสารคาม </option>
+      		<option value="มุกดาหาร">มุกดาหาร </option>
+      		<option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+      		<option value="ยโสธร">ยโสธร </option>
+      		<option value="ยะลา">ยะลา </option>
+      		<option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+      		<option value="ระนอง">ระนอง </option>
+      		<option value="ระยอง">ระยอง </option>
+      		<option value="ราชบุรี">ราชบุรี</option>
+      		<option value="ลพบุรี">ลพบุรี </option>
+      		<option value="ลำปาง">ลำปาง </option>
+      		<option value="ลำพูน">ลำพูน </option>
+      		<option value="เลย">เลย </option>
+      		<option value="ศรีสะเกษ">ศรีสะเกษ</option>
+      		<option value="สกลนคร">สกลนคร</option>
+      		<option value="สงขลา">สงขลา </option>
+      		<option value="สมุทรสาคร">สมุทรสาคร </option>
+      		<option value="สมุทรปราการ">สมุทรปราการ </option>
+      		<option value="สมุทรสงคราม">สมุทรสงคราม </option>
+      		<option value="สระแก้ว">สระแก้ว </option>
+      		<option value="สระบุรี">สระบุรี </option>
+      		<option value="สิงห์บุรี">สิงห์บุรี </option>
+      		<option value="สุโขทัย">สุโขทัย </option>
+      		<option value="สุพรรณบุรี">สุพรรณบุรี </option>
+      		<option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+      		<option value="สุรินทร์">สุรินทร์ </option>
+      		<option value="สตูล">สตูล </option>
+      		<option value="หนองคาย">หนองคาย </option>
+      		<option value="หนองบัวลำภู">หนองบัวลำภู </option>
+      		<option value="อำนาจเจริญ">อำนาจเจริญ </option>
+      		<option value="อุดรธานี">อุดรธานี </option>
+      		<option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+      		<option value="อุทัยธานี">อุทัยธานี </option>
+      		<option value="อุบลราชธานี">อุบลราชธานี</option>
+      		<option value="อ่างทอง">อ่างทอง </option>
+      		<option value="บึงกาฬ">บึงกาฬ</option>
+		</select>
+    <br><br><br><input type="button" id="subbt" value="submit"/>
+  	<input type="button" id="clearbr" value="cancel"/>
+	</form>
+    
+</div>
+
+<div  class="hiden" id="resultarea">
+	<h1 id="provincename">จังหวัด</h1>
+	<img id="myImg" width="300" height="300"  alt=""/> 
+    <h3 id="slogan">คำขวัญ : </h3>
+</div>
+
+</body>
+</html>
