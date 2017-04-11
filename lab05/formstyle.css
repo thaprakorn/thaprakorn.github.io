@@ -1,0 +1,78 @@
+
+.formstyle{
+    max-width: 600px;
+    padding: 20px 15px 50px 100px;
+    font: 20px Arial, Helvetica, sans-serif;
+	font-style: italic;
+}
+
+.formstyle label{
+    width: 150px;
+    font-weight: bold;
+    float: left;
+}
+
+.formstyle .number-field{
+    width: 80px;
+    text-align: center;
+}
+
+.formstyle .input-field{
+    width: 48%; 
+}
+
+.formstyle .input-field,
+.formstyle .number-field, 
+.formstyle .select-field{
+    box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+
+
+.formstyle input[type=submit],
+.formstyle input[type=button]{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #FF8500;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+}
+.formstyle input[type=submit]:hover,
+.formstyle input[type=button]:hover{
+    background: #EA7B00;
+    color: #fff;
+}
+
+.resultarea{
+	position:absolute; 
+	top:50px; 
+	left:700px;
+}
+
+.hiden{
+	display:none;
+	max-width: 600px;
+    padding: 20px 15px 50px 100px;
+    font: 20px Arial, Helvetica, sans-serif;
+}
+
+body.child{
+	background-image:url(bg-child.jpg);
+	background-repeat:no-repeat;
+	color:#F93;
+	font:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif
+}
+body.women{
+	background-image:url(bg-women.jpg);
+	background-repeat:no-repeat;
+	color:#F0F;
+}
+body.men{
+	background-image:url(bg-men.jpg);
+	background-repeat:no-repeat;
+}
