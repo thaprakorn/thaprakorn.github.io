@@ -1,0 +1,131 @@
+
+body { 
+	font-family: 'Libre Baskerville', sans-serif;
+	font-size: 1em;
+	background: #000000 ;
+	color:white;
+	}
+a {
+	color: #14DDEE;
+	}
+	
+.page-wrapper { 
+	width: 600px;
+	padding-left: 0px; 
+	padding-right: 20px; 
+        margin: 200px auto 0px auto; 
+	position: relative;
+	}
+h1{
+	font-size: 50px;
+}
+
+h3,h4,h5,h6{
+	font-family:"arial narrow", arial, verdana, sans-serif;
+	border-bottom-style: solid;
+	border-color:yellow;
+	width: 400px; float: left;
+	}
+
+.intro { 
+	width: 950px; float: left;
+	margin-top: -100px;
+	}
+	
+.explanation{
+	padding-right: 250px; margin-top: 6px; float: right;
+	}
+
+
+.sidebar {
+	width: 141px;
+	position: absolute;
+	left: 410px;
+	margin: 100px;
+	margin-top: 150px;
+	padding: 0px;
+	}
+
+.sidebar .wrapper { 
+	font-size: 0.70em;
+	padding: 10px; 
+	width: 141px; 
+	}
+
+.sidebar ul {
+	margin: 0px;
+	padding: 0px;
+	}
+
+.sidebar a.designer-name {
+    	display: inline;
+    	color: #ff9600;
+	text-decoration: none;
+	font-weight: normal;
+	text-transform: capitalize;	
+}
+
+.sidebar li a { 
+	color: #fff;
+	text-decoration: none;
+	}
+
+.sidebar li a:hover {
+	text-decoration: underline;
+	}
+
+.design-selection li {
+	line-height: 16px; 
+        padding: 5px 0px;
+	border-bottom: 1px solid #003d90;
+	}
+.design-selection li a {
+	font-weight: bold;
+	color: #fff;
+	display: block;
+        text-transform: uppercase;
+        text-decoration: none; 
+	}
+
+
+
+
+
+footer {
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+
+footer a:link, footer a:visited { 
+	margin-right: 6px; 
+	color: #ff9600;
+	}
+
+
+.extra1, .extra6 {
+	position: absolute;
+}
+
+.extra1 { 
+	background: url(image1.jpg) no-repeat; 
+	top: 0px;
+	right: 0px; 
+	width: 100%; 
+	height: 500px; 
+	z-index: 1;
+	}
+
+.extra6 {
+	z-index: 2;
+	top: 125em;
+	left: 0px;
+	width: 100%; 
+	height: 100%; 
+	background: url(bg2.jpg) repeat-x right bottom;
+	}
+
+
+
+
+
+
