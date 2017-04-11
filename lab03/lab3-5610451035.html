@@ -1,0 +1,224 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Registration form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="formstyle.css">
+<script>
+window.onload = function() {
+    document.getElemenyById("firstname").value = localStorage.getItem("firstname");
+	document.getElemenyById("lastname").value = localStorage.getItem("lastname");
+	document.getElemenyById("dateofweek").value = localStorage.getItem("dateofweek");
+	document.getElemenyById("date").value = localStorage.getItem("date");
+	document.getElemenyById("month").value = localStorage.getItem("month");
+	document.getElemenyById("Year").value = localStorage.getItem("Year");
+	document.getElemenyById("citizen").value = localStorage.getItem("citizen");
+	document.getElemenyById("housenum").value = localStorage.getItem("housenum");
+	document.getElemenyById("street").value = localStorage.getItem("street");
+	document.getElemenyById("city").value = localStorage.getItem("city");
+	document.getElemenyById("province").value = localStorage.getItem("province");
+	document.getElemenyById("zipcode").value = localStorage.getItem("zipcode");
+	document.getElemenyById("phone").value = localStorage.getItem("phone");
+	document.getElemenyById("cellphone").value = localStorage.getItem("cellphone");
+	document.getElemenyById("zodiacsign").value = localStorage.getItem("zodiacsign");
+	document.getElemenyById("zipcode").value = localStorage.getItem("zipcode");
+}
+
+function save() {
+    if (confirm("Save your informatiom?") == true) {
+        localStorage.setItem("firstname", document.getElementById("firstname").value);
+    	localStorage.setItem("lastname", document.getElementById("lastname").value);
+		localStorage.setItem("dateofweek", document.getElementById("dateofweek").value);
+		localStorage.setItem("date", document.getElementById("date").value);
+		localStorage.setItem("month", document.getElementById("month").value);
+		localStorage.setItem("Year", document.getElementById("Year").value);
+		localStorage.setItem("citizen", document.getElementById("citizen").value);
+		localStorage.setItem("housenum", document.getElementById("housenum").value);
+		localStorage.setItem("street", document.getElementById("street").value);
+		localStorage.setItem("city", document.getElementById("city").value);
+		localStorage.setItem("province", document.getElementById("province").value);
+		localStorage.setItem("zipcode", document.getElementById("zipcode").value);
+		localStorage.setItem("phone", document.getElementById("phone").value);
+		localStorage.setItem("cellphone", document.getElementById("cellphone").value);
+		localStorage.setItem("zodiacsign", document.getElementById("zodiacsign").value);
+		localStorage.setItem("zodiacyear", document.getElementById("zodiacyear").value);
+		alert(window.onload);
+    } 
+	else{
+		document.getElementById("regisform").reset();
+		}
+       
+   
+   
+}
+
+function submitForm() {
+	var a = document.getElementById("firstname").value;
+	var message = confirm("First name:"+a+"\nLast name:\nBirthdate:\nBirthday:\nCritizenship number:\nAddress:\nPhone number:\nCellphone number:\nZodiac sign:\nZodiac year:");
+    if ( message == true) {
+        
+    } 
+	else {
+        
+    }
+    
+}
+function clearForm() {
+    document.getElementById("regisform").reset();
+}
+</script>
+</head>
+
+<body>
+<h1>REGISTRATION FORM</h1>
+
+<div class="formstyle" id="informationform">
+	<form id="regisform">
+		<label><span>Firstname <span class="required">*</span></span>
+	    <input type="text" class="input-field" id="firstname" /></label>
+        <label><span>Lastname <span class="required">*</span></span>
+      <input type="text" class="input-field"/ id="lastname"></label>
+        <label><span>Birthday <span class="required">*</span></span>
+        <select class="select-field" id="dateofweek">
+			<option value="Monday">Monday</option>
+		  	<option value="Tuesday">Tuesday</option>
+		 	<option value="Wednesday">Wednesday</option>
+		  	<option value="Thursday">Thursday</option>
+		  	<option value="Friday">Friday</option>
+		  	<option value="Saturday">Saturday</option>
+            <option value="Sonday">Sonday</option>
+        </select> 
+        </label>
+   		<label><span>Birthdate <span class="required">*</span></span>
+        <select class="select-field" id="date">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		  <option value="20">20</option>
+		  <option value="21">21</option>
+		  <option value="22">22</option>
+		  <option value="23">23</option>
+		  <option value="24">24</option>
+		  <option value="25">25</option>
+		  <option value="26">26</option>
+		  <option value="27">27</option>
+		  <option value="28">28</option>
+		  <option value="29">29</option>
+		  <option value="30">30</option>
+		  <option value="31">31</option>
+		  </select>
+          <select class="select-field" id="month">
+		  <option value="1">January</option>
+		  <option value="2">February</option>
+		  <option value="3">March</option>
+		  <option value="4">April</option>
+		  <option value="5">May</option>
+		  <option value="6">June</option>
+		  <option value="7">July</option>
+		  <option value="8">August</option>
+		  <option value="9">September</option>
+		  <option value="10">October</option>
+		  <option value="11">November</option>
+		  <option value="12">December</option>
+          </select>
+       	<input type="text" class="number-field" id="year" placeholder="Year"></input>
+		</label>
+    
+		<label><span>Citizenship number <span class="required">*</span></span><span class="required"></span>
+      <input type="text" class="input-field"/ id="citizen"></label> 
+        <label><span>Address <span class="required">*</span></span>
+      <input type="text" class="input-field" placeholder="House number"/ id="housenum"></label>
+        <label><span><span class="required"></span></span>
+        <input type="text" class="input-field"/ placeholder="Street" id="street"></label>
+        <label><span><span class="required"></span></span>
+        <input type="text" class="input-field"/ placeholder="City" id="city"></label>
+         <label><span><span class="required"></span></span>
+        <input type="text" class="input-field"/ placeholder="Province" id="province"></label>
+        <label><span> <span class="required"></span></span>
+      <input type="text" class="number-field"/ placeholder="Zipcode" id="zipcode">
+      </label>
+       
+        <br><label><span>Phone number <span class="required">*</span></span>
+        <input type="text" class="input-field" value="+662" id="phone"/> 
+		<label><span>Cell phone number <span class="required">*</span></span>
+        <input type="text" class="input-field"/ value="+66" id="cellphone"></label>
+        
+		 <label><span>Zodiac sign <span class="required">*</span></span>
+         <select class="select-field" id="zodiacsign">
+		  	<option value="Capricorn(มังกร)">Capricorn(มังกร)</option>
+		  	<option value="Aquarius(กุมภ์)">Aquarius(กุมภ์)</option>
+		  	<option value="Pisces(มีน)">Pisces(มีน)</option>
+		  	<option value="Aries(เมษ)">Aries(เมษ)</option>
+		  	<option value="Taurus(พฤษภ)">Taurus(พฤษภ)</option>
+		  	<option value="Gemini(เมถุน)">Gemini(เมถุน)</option>
+            <option value="Cancer(กรกฎ)">Cancer(กรกฎ)</option>
+            <option value="Leo(สิงห์)">Leo(สิงห์)</option>
+            <option value="Virgo(กันย์)">Virgo(กันย์)</option>
+            <option value="Libra(ตุลย์)">Libra(ตุลย์)</option>
+            <option value="Scorpio(พิจิก)">Scorpio(พิจิก)</option>
+            <option value="Sagittarius(ธนู)">Sagittarius(ธนู)</option>
+       	</select>
+        </label>
+        <label><span>Zodiac year <span class="required">*</span></span>
+        <select class="select-field" id="zodiacyear">
+		  	<option value="The Year of the Rat (ชวด)">The Year of the Rat (ชวด)</option>
+		  	<option value="The Year of the Cow (ฉลู)">The Year of the Cow (ฉลู)</option>
+		  	<option value="The Year of the Tiger (ขาล)">The Year of the Tiger (ขาล)</option>
+		  	<option value="The Year of the Rabbit (เถาะ)">The Year of the Rabbit (เถาะ)</option>
+		  	<option value="The Year of the Dragon (มะโรง)">The Year of the Dragon (มะโรง)</option>
+		  	<option value="The Year of the  Snake (มะเส็ง)">The Year of the  Snake (มะเส็ง)</option>
+            <option value="The Year of the Horse (มะเมีย)">The Year of the Horse (มะเมีย)</option>
+            <option value="The Year of the Goat (มะแม)">The Year of the Goat (มะแม)</option>
+            <option value="The Year of the Monkey (วอก)">The Year of the Monkey (วอก)</option>
+            <option value="The Year of the Rooster (ระกา)">The Year of the Rooster (ระกา)</option>
+            <option value="The Year of the Dog (จอ)">The Year of the Dog (จอ)</option>
+            <option value=" The Year of the Pig (กุน)"> The Year of the Pig (กุน)</option>
+       	</select>
+        </label>
+        
+  </form>
+  <br>
+  <input type="button" onclick="save()" value="save"/>
+  <input type="button" onclick="submitForm()" value="submit"/>
+  <input type="button" onclick="clearForm()" value="cancel"/>
+</div>
+
+<div class="resultarea" id="resultarea">
+<img src="personicon.png" width="400" height="400" alt="img"/>
+<fieldset>
+    <legend> Your Information </legend>
+    First name:
+    <br>Last name:
+    <br>Birthdate:
+    <br>Birthday:
+    <br>Critizenship number:
+    <br>Address:
+    <br>Phone number:
+    <br>Cellphone number:
+    <br>Zodiac sign:
+    <br>Zodiac year:
+   
+  </fieldset>
+</div>
+
+
+
+</body>
+</html>
+
